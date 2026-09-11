@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../styles/BlogList.css";
 import BlogCard from "../card/BlogCard";
+import { getArticles } from "../../services/articleServices";
 
 export default function BlogList({
-  blogs,
   onViewBlog,
   onLike,
   onEditBlog,
@@ -11,14 +11,32 @@ export default function BlogList({
   onViewComments,
   onCreateBlog,
 }) {
+  const [blogs, setBlogs] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
+
+  useEffect(() => {
+    getArticles()
+      .then((result) => {
+        setBlogs(result);
+      })
+      .catch((error) => {
+        console.log("Failed to fetch articles");
+        console.error(error);
+      });
+  }, []);
 
   const categories = ["All", ...new Set(blogs.map((b) => b.category))];
 
   const filteredBlogs = blogs.filter((blog) => {
-    const matchesSearch = blog.title.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === "All" || blog.category === selectedCategory;
+    const matchesSearch = blog.title
+      .toLowerCase()
+      .includes(searchTerm.toLowerCase());
+
+    const matchesCategory =
+      selectedCategory === "All" ||
+      blog.category === selectedCategory;
+
     return matchesSearch && matchesCategory;
   });
 
@@ -29,7 +47,11 @@ export default function BlogList({
           <p className="bloglist-kicker">Manage</p>
           <h1>Blog List</h1>
         </div>
-        <button className="bloglist-create" onClick={onCreateBlog}>
+
+        <button
+          className="bloglist-create"
+          onClick={onCreateBlog}
+        >
           + New entry
         </button>
       </div>
@@ -66,7 +88,7 @@ export default function BlogList({
             <BlogCard
               key={blog.id}
               {...blog}
-              commentCount={blog.comments.length}
+              commentCount={blog.comments?.length || 0}
               onViewBlog={() => onViewBlog(blog)}
               onLike={() => onLike(blog.id)}
               onEdit={() => onEditBlog(blog)}
@@ -75,7 +97,9 @@ export default function BlogList({
             />
           ))
         ) : (
-          <p className="bloglist-empty">No entries match your search.</p>
+          <p className="bloglist-empty">
+            No entries match your search.
+          </p>
         )}
       </div>
     </div>
