@@ -1,0 +1,125 @@
+.sidebar {
+  width: 232px;
+  min-height: 100vh;
+  background: var(--ink);
+  color: #d7dbe0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 28px 20px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.sidebar-brand {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 600;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sidebar-mark {
+  color: var(--gold);
+}
+
+.sidebar-sub {
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #7d8590;
+  margin: 4px 0 28px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sidebar-link {
+  text-align: left;
+  padding: 10px 12px;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-sm);
+  color: #b8bec8;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.sidebar-link:hover {
+  background: #7d8059;
+  color: #fff;
+}
+
+.sidebar-link.is-active {
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+
+.sidebar-footer {
+  border-top: 1px solid #383f49;
+  padding-top: 18px;
+}
+
+.sidebar-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.sidebar-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: var(--ink);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sidebar-user-name {
+  font-size: 13.5px;
+  color: #fff;
+  margin: 0 0 2px;
+}
+
+.sidebar-exit {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #7d8590;
+  font-size: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.sidebar-exit:hover {
+  color: #fff;
+}
+
+.sidebar-logout {
+  width: 100%;
+  padding: 9px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid #4a3232;
+  background: transparent;
+  color: #e08a78;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.sidebar-logout:hover {
+  background: #3a2222;
+  justify-content: center;
+}

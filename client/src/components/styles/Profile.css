@@ -1,0 +1,82 @@
+.profile {
+  padding: 40px 44px 60px;
+}
+
+.profile-kicker {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 8px;
+}
+
+.profile h1 {
+  font-size: 26px;
+  margin-bottom: 28px;
+}
+
+.profile-card {
+  max-width: 400px;
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 32px;
+  text-align: center;
+}
+
+.profile-avatar {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.profile-card h2 {
+  font-size: 19px;
+  margin-bottom: 4px;
+}
+
+.profile-role {
+  font-size: 13px;
+  color: var(--ink-faint);
+  margin: 0 0 16px;
+}
+
+.profile-bio {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  margin: 0 0 24px;
+}
+
+.profile-details {
+  text-align: left;
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+  margin: 0;
+}
+
+.profile-details div {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  font-size: 13.5px;
+}
+
+.profile-details dt {
+  color: var(--ink-faint);
+}
+
+.profile-details dd {
+  margin: 0;
+  color: var(--ink);
+  font-weight: 500;
+}

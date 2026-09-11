@@ -1,0 +1,84 @@
+.bloglist {
+  padding: 40px 44px 60px;
+  max-width: 820px;
+}
+
+.bloglist-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.bloglist-kicker {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 8px;
+}
+
+.bloglist-head h1 {
+  font-size: 26px;
+}
+
+.bloglist-create {
+  padding: 10px 18px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.bloglist-create:hover {
+  background: var(--accent-deep);
+}
+
+.bloglist-controls {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.bloglist-search {
+  flex: 1 1 240px;
+  padding: 10px 13px;
+  font-size: 14px;
+  font-family: var(--font-body);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  background: var(--paper-raised);
+  outline: none;
+}
+
+.bloglist-search:focus {
+  border-color: var(--accent);
+}
+
+.bloglist-select {
+  padding: 10px 13px;
+  font-size: 14px;
+  font-family: var(--font-body);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  background: var(--paper-raised);
+  outline: none;
+  cursor: pointer;
+}
+
+.bloglist-count {
+  font-size: 12.5px;
+  color: var(--ink-faint);
+  margin: 0 0 8px;
+}
+
+.bloglist-empty {
+  color: var(--ink-faint);
+  padding: 32px 0;
+}

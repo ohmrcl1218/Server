@@ -1,0 +1,68 @@
+.blogform-box {
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 32px;
+  max-width: 480px;
+  width: 100%;
+  animation: popup-rise 0.2s ease;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.blogform {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+}
+
+.blogform label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  margin: 14px 0 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.blogform input,
+.blogform select,
+.blogform textarea {
+  padding: 10px 12px;
+  font-size: 14px;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  outline: none;
+  resize: vertical;
+}
+
+.blogform input:focus,
+.blogform select:focus,
+.blogform textarea:focus {
+  border-color: var(--accent);
+  background: #fff;
+}
+
+.blogform-row {
+  display: flex;
+  gap: 14px;
+}
+
+.blogform-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.blogform-error {
+  color: var(--danger);
+  font-size: 13px;
+  margin: 12px 0 0;
+}
+
+.blogform .popup-actions {
+  margin-top: 24px;
+}

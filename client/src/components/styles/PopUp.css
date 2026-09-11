@@ -1,0 +1,122 @@
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(33, 38, 45, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1000;
+  animation: popup-fade 0.15s ease;
+}
+
+.popup-box {
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 32px;
+  max-width: 360px;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  animation: popup-rise 0.2s ease;
+}
+
+.popup-mark {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.popup-mark-success {
+  background: var(--success-tint);
+  color: var(--success);
+  justify-content: center;
+}
+
+.popup-mark-failed {
+  background: var(--danger-tint);
+  color: var(--danger);
+  justify-content: center;
+}
+
+.popup-title {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.popup-message {
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin: 0 0 24px;
+  line-height: 1.55;
+}
+
+.popup-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.popup-btn {
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  font-size: 13.5px;
+  font-weight: 600;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: opacity 0.12s ease, transform 0.12s ease;
+}
+
+.popup-btn:hover {
+  transform: translateY(-1px);
+}
+
+.popup-btn:active {
+  transform: translateY(0);
+}
+
+.popup-btn-success {
+  background: var(--success);
+  color: #fff;
+  width: 100%;
+}
+
+.popup-btn-failed {
+  background: var(--danger);
+  color: #fff;
+}
+
+.popup-btn-accent {
+  background: var(--accent);
+  color: #fff;
+}
+
+.popup-btn-ghost {
+  background: transparent;
+  border-color: var(--line-strong);
+  color: var(--ink-soft);
+}
+
+.popup-btn-ghost:hover {
+  background: var(--paper);
+}
+
+.popup-confirm .popup-title {
+  margin-bottom: 6px;
+}
+
+@keyframes popup-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popup-rise {
+  from { opacity: 0; transform: translateY(6px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}

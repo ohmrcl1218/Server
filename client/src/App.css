@@ -1,0 +1,48 @@
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-shell > main {
+  flex: 1;
+}
+
+.app-admin {
+  display: flex;
+  min-height: 100vh;
+}
+
+.app-admin-content {
+  flex: 1;
+  background: var(--paper);
+  min-width: 0;
+}
+
+.already-in {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.already-in h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.already-in p {
+  color: var(--ink-soft);
+  margin: 0 0 24px;
+}
+
+.already-in-btn {
+  padding: 11px 22px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}

@@ -1,0 +1,105 @@
+.masthead {
+  background: var(--paper);
+  background-color: #dfd4c0;
+  border-bottom: 1px solid var(--line-strong);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.masthead-row {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.masthead-brand {
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.masthead-mark {
+  color: var(--accent);
+}
+
+.masthead-nav {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.masthead-link {
+  background: none;
+  border: none;
+  padding: 7px 12px;
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+
+.masthead-link:hover {
+  color: var(--ink);
+}
+
+.masthead-link.is-active {
+  color: var(--ink);
+  border-bottom-color: var(--accent);
+  font-weight: 600;
+}
+
+.masthead-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.masthead-user {
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.masthead-btn {
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  color: var(--ink-soft);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.masthead-btn:hover {
+  border-color: var(--ink-soft);
+  color: var(--ink);
+}
+
+.masthead-btn-accent {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.masthead-btn-accent:hover {
+  background: var(--accent-deep);
+  border-color: var(--accent-deep);
+  color: #fff;
+}
+
+@media (max-width: 640px) {
+  .masthead-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

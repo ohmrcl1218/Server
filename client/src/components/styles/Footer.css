@@ -1,0 +1,21 @@
+.site-footer {
+  border-top: 1px solid var(--line);
+  margin-top: 48px;
+}
+
+.site-footer-row {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 12.5px;
+  color: var(--ink-faint);
+}
+
+.site-footer-year {
+  font-family: var(--font-mono);
+}

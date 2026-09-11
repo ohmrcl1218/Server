@@ -1,0 +1,62 @@
+.about {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 56px 24px 80px;
+}
+
+.about-kicker {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 14px;
+}
+
+.about h1 {
+  font-size: 32px;
+  margin-bottom: 24px;
+  max-width: 20ch;
+}
+
+.about-body {
+  font-size: 15.5px;
+  color: var(--ink-soft);
+  line-height: 1.7;
+  margin: 0 0 18px;
+  max-width: 62ch;
+}
+
+.about-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.about-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.about-author-name {
+  margin: 0;
+  font-weight: 600;
+}
+
+.about-author-role {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: var(--ink-faint);
+}
